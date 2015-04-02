@@ -22,11 +22,10 @@
       <p ng-click="toggle.state = !toggle.state">Change view</p>
       </div>
 <ul>
-		<li class="Idea" ng-repeat="(i, Idea) in Ideas | orderBy:orderProp" ng-click="toggle.state3 = !toggle.state3" ng-class="{'grid' : toggle.state,'idea-flip' : toggle.state3}">
+		<li class="Idea" ng-repeat="(i, Idea) in Ideas | orderBy:orderProp" ng-class="{'grid' : toggle.state}">
 			<h2>{{Idea.title}}</h2>
+      <div class="flip-detail">
 			<p class="detail">{{Idea.detail}}</p>
-      <div class="flipped" ng-class="{'flipped-click':toggle.state3}">
-        <button>Delete</button>
       </div>
 		</li>
 	</ul>
