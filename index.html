@@ -1,0 +1,78 @@
+<html ng-app="IdeaApp">
+<head>
+  <script>
+      $(document).ready(function(){
+        $(window).bind('scroll',function(e){
+            parallaxScroll();
+          });
+          
+          
+          function parallaxScroll(){
+            var scrolledY = $(window).scrollTop();
+          $('.top').css('background-position','center -'+((scrolledY*0.8))+'px');
+          }     
+      });
+  </script>
+
+  <script>
+function previewFile() {
+  var preview = document.querySelector('#preview');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+
+  reader.onloadend = function () {
+    preview.src = reader.result;
+  }
+
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+    preview.src = "";
+  }
+}
+
+  previewFile();  //calls the function named previewFile()
+  </script>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="animations.css"/>
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+  <body>
+        <div class="pullout" ng-class="{'pullout-active' : toggle.state1}">
+          <div class="pullout-head"></div>
+          <a href="#/main" ng-click="toggle.state1 = !toggle.state1">All Notes</a>
+          <a href="#/main" ng-click="toggle.state1 = !toggle.state1">Archived</a>
+          <a href="#/inspiration" ng-click="toggle.state1 = !toggle.state1">Inspiration</a>
+          <a href="#/main" ng-click="toggle.state1 = !toggle.state1">Trash</a>
+      </div>
+      <div class="pullout-cover" ng-click="toggle.state1 = !toggle.state1" ng-class="{'pullout-cover-active':toggle.state1}">
+      </div>
+  <div class="wrapper" ng-class="{'wrapper-pullout':toggle.state1}">
+  <header>
+  <div class="nav-button" ng-click="toggle.state1 = !toggle.state1">
+    <!-- <a href="#/main"><img src="img/nav.png"></a> -->
+    <img src="img/nav.png">
+  </div>
+    <h1>Ideas</h1>
+    <div class="add-button">
+      <a href="#/add">Add</a>
+    </div>
+</header>
+         <div class="view-animate-container">
+          <div ng-view class="view-animate">
+          </div>
+        </div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/indexeddb.js"></script>
+      </body>
+</html>
