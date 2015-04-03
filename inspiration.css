@@ -6,12 +6,54 @@
 	position:absolute;
 }
 
-.group img {
-	width:50%;
-	float:left;
-	border: 1px solid #dedede;
-	-webkit-box-sizing: border-box;
-  	-moz-box-sizing: border-box;
-  	box-sizing: border-box;
+.pin {
+		width:80%;
+		margin:1em 10%;
+		transition: 0.3s;	
+	}
+.pin img {
+	width: 100%;
+	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
+.container-wide .pin img {
+	width: 80%;
+}
+
+	.container {
+width: 90%;
+  padding: 0;
+  margin-top: 30px;
+  margin: 1em 5%;
+
+	}
+
+	.container-wide .pin {
+min-height: 150px;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  transition: 0.3s;
+  margin: 0;
+
+	}
+
+.pin-box {
+	width:100%;
+	margin-bottom:2em;
+	float:left;
+}
+
+.container-wide .pin-box {
+		width: 50%;
+  margin: 0;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  float: left;
+	}
+
+.pin-name {
+	color: #454545;
+	font-size: 14px;
+	width: 50%;
+	}

@@ -1,0 +1,33 @@
+<!-- 	<div class="pullout" ng-class="{'pullout-active' : toggle.state1}">
+          <a href="#/main">All Notes</a>
+          <a href="#">Archived</a>
+          <a href="#">Trash</a>
+      </div>
+      <div class="pullout-cover" ng-click="toggle.state1 = !toggle.state1" ng-class="{'pullout-cover-active':toggle.state1}">
+      </div>
+  <div class="wrapper" ng-class="{'wrapper-pullout':toggle.state1}">
+  <header>
+  <div class="nav-button" ng-click="toggle.state1 = !toggle.state1">
+    <!-- <a href="#/main"><img src="img/nav.png"></a> -->
+<!--     <img src="img/nav.png">
+  </div>
+    <h1>Notes</h1>
+    <div class="add-button">
+      <a href="#/add">Add</a>
+    </div>
+</header> -->
+
+<div class="container" >
+  <div class="change-view">
+      <p ng-click="toggle.state = !toggle.state">Change view</p>
+      </div>
+<ul>
+		<li class="Idea" ng-repeat="(i, Idea) in Ideas | orderBy:orderProp" ng-class="{'grid' : toggle.state}">
+			<h2>{{Idea.title}}</h2>
+      <div class="flip-detail">
+			<p class="detail">{{Idea.detail}}</p>
+      </div>
+		</li>
+	</ul>
+</div>
+</div>
