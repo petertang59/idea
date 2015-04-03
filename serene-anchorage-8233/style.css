@@ -1,0 +1,305 @@
+body {
+	background: #FAFAFA;
+}
+
+header {
+position: fixed;
+height: 40px;
+  background: #00b7ff;
+  width: 90%;
+  margin: 0;
+  display: block;
+  padding: 5px 5%;
+  text-align: center;
+  /*border-bottom: 1px solid #DEDEDE;*/
+  z-index: 5;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+	width: 20px;
+	height: 20px;
+	float: left;
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 20px;
+	/* background-color: white; */
+	border: none;
+	padding: 5px;
+	position: absolute;
+	top:10px;
+}
+
+.nav-button img {
+	width: 20px;
+}
+
+.pullout {
+  width: 140px;
+  height: 100%;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: -140px;
+  /*padding: 30px;*/
+  text-align: left;
+  transition: 0.3s;
+  /*border:none;*/
+  border: solid 1px #DEDEDE;
+  background: #FAFAFA;
+   /*box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);*/
+   /*box-shadow: 0 0px 5px 3px rgba(0, 0, 0, 0.1), 0 3px 5px 0px rgba(0, 0, 0, 0.1);*/
+}
+
+.pullout-active {
+  width: 140px;
+  height: 100%;
+  background: #FAFAFA;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0px;
+  text-align: left;
+  transition: 0.3s;
+  /*border-right: 1px solid #DEDEDE;*/
+}
+
+.pullout-cover {
+	display:none;
+	height:100%;
+	width:100%;
+	z-index:3;
+	position:fixed;
+	opacity:0;
+}
+
+.pullout-cover-active {
+	display:block;
+}
+
+.pullout-head {
+	width:100%;
+	height:50px;
+	background: white;
+	/*border: 1px solid #dedede;*/
+	  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.pullout a {
+	display: block;
+	float:none;
+	padding: 10px 30px;
+}
+
+.button {
+	font-size:14px;
+	padding:0.5em;
+	margin: 1em;
+	border: 1px solid #dedede;
+}
+
+.add-button {
+	float:right;
+	position:absolute;
+	right:5%;
+	top:18px;
+}
+
+.add-button a {
+	color: white !important;
+}
+
+.container {
+	top:40px;
+	position:absolute;
+	width:90%;
+	padding: 30px 5%;
+	text-align: center;
+	left: 0px;
+
+/*	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;*/
+}
+
+.wrapper {
+	left:0px;
+	position:relative;
+	transition: 0.3s;
+}
+
+.wrapper-pullout {
+	left:140px;
+	transition: 0.3s;
+}
+
+.nav-toggle {
+	left:150px;
+}
+
+html, body {
+	margin:0;
+	padding:0;
+	font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+	text-align: center;
+	margin: 0;
+	font-size:20pt;
+	/*color: #454545;*/
+	color:white;
+}
+
+h2 {
+	margin:0em;
+	color: #454545;
+}
+
+p {
+	margin:0;
+	color: #454545;
+	font-size:12pt;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: #454545;
+}
+
+ul {
+	padding:0;
+	
+}
+
+li {
+	list-style: none;
+	text-align: center;
+}
+
+input, textarea {
+	font-family: Roboto slab;
+	color: #454545;
+}
+
+.idea {
+	height:100px;
+	width:100%;
+	background:white;
+	padding:20px 5px;
+	float:left;
+	/*border: 1px solid #DEDEDE;*/
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+  	position:relative;
+  	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  	margin-bottom:1em;
+  	transition: 0.5s;
+  	overflow:hidden;
+}
+
+.idea-full {
+height: 80%;
+  width: 90%;
+  background: white;
+  padding: 20px 5px;
+  /* border: 1px solid #DEDEDE; */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: 0.5s;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 1em;
+  position: fixed;
+  top: 80px;
+  left: 5%;
+  transition: 0.5s;
+  z-index:5;
+}
+
+.detail {
+max-height: 1.5em;
+  overflow: hidden;
+}
+
+.idea-swipe {
+	/*transform: rotateX(180deg);*/
+	transition:0.5s;
+	display:block;
+}
+
+.swiped {
+	position: absolute;
+  width: 0;
+  /*height: 100px;*/
+  background: white;
+  margin: -21px -1%;
+  text-align:center;
+  transition: 0.5s;
+  z-index:1;
+  left: -440px;
+}
+
+.swiped-visible {
+	z-index:1;
+	transition: 0.5s;
+	left:6%;
+	height:100px;
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+  	width: 90%;
+}
+
+.swiped-hidden {
+	display:none;
+}
+
+.swiped button {
+	position:relative;
+	display:inline-block;
+	margin-top:40px;
+}
+
+.edit {
+	display:none;
+}
+
+.edit-visible {
+	display:block;
+}
+
+.edit-visible textarea{
+	border:0px;
+	resize:none;
+}
+
+.edit-visible title{
+	font-size:20pt;
+}
+
+.edit-visible detail{
+	font-size:12pt;
+}
+
+.grid {
+	width:50%;
+	float:left;
+	transition: 0.5s;
+	max-height: 100px;
+}
+
+li, ul, div {
+/*	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;*/
+}
+
+div:focus, textarea:focus, input:focus, select:focus, button:focus{
+    outline: 0;
+}
+
+//Typography//

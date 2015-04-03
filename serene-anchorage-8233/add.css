@@ -1,0 +1,76 @@
+input {
+	border:none;
+	width: 100%;
+}
+
+.title {
+	width:100%;
+	margin-bottom: 1em;
+	/*border-bottom: 1px solid #DEDEDE;*/
+	/*position:absolute;*/
+	padding-bottom: 1em;
+
+}
+
+.title input {
+	font-size: 18px;
+	width: 100%;
+	font-weight: 700;
+	padding: 1em;
+	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.content {
+	width:100%;
+	margin:1em 0;
+/*	position:absolute;*/
+}
+
+textarea, .content input {
+	font-size:16px;
+	min-height:350px;
+	width:100%;
+	border:none;
+	resize:none;
+	padding-bottom: 1em;
+	/*border-bottom: 1px solid #dedede;*/
+	padding:1em;
+	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+button {
+	margin-top:1em;
+}
+
+.textbox {
+	width:90%;
+	min-height:400px;
+	text-align: left;
+	margin: auto 5%;
+}
+
+.idea-image {
+	width:100%;
+	border: none;
+}
+
+h2 {
+
+}
+
+#label {
+	  height: 70px;
+  width: 70px;
+  display: block;
+  position: absolute;
+  /* top: 0; */
+  z-index: 2;
+  background-image: url(img/cam.png);
+  right: 5%;
+  bottom: 100px;
+  background-size: contain;
+}
+
+#pic {
+	display:none;
+}

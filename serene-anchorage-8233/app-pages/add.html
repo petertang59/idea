@@ -1,0 +1,39 @@
+<link rel="stylesheet" type="text/css" href="add.css"/>
+
+	<!-- <div class="pullout" ng-class="{'pullout-active' : toggle.state1}">
+          <a href="#/main">All Notes</a>
+          <a href="#">Archived</a>
+          <a href="#">Trash</a>
+      </div>
+      <div class="pullout-cover" ng-click="toggle.state1 = !toggle.state1" ng-class="{'pullout-cover-active':toggle.state1}">
+      </div>
+  <header>
+  <div class="nav-button" ng-click="toggle.state1 = !toggle.state1">
+    <img src="img/nav.png">
+  </div>
+    <h1>Notes</h1>
+    <div class="add-button">
+      <a href="#/add">Add</a>
+    </div>
+</header> -->
+
+<div class="container">
+<form name="frm" ng-submit="addIdea()">
+	<div class="title">
+		<input type="text" placeholder="Title" name="newIdea" ng-model="newIdea" required/>
+	</div>
+	
+	<textarea type="text" placeholder="Write here" name="newDetail" ng-model="newDetail"></textarea>
+    <img class="idea-image" id="preview" ng-model="newImage"></img>
+
+ <!--    <div class="content">
+	<input type="text" placeholder="Details" name="newDetail" ng-model="newDetail">
+    <img id="preview" ng-model="newImage"></img>
+	</div> -->
+	
+	<label id="label" for="pic"></label>
+	<input id="pic" type="file" onchange="previewFile()">
+	<button class="top-button" ng-disabled="frm.$invalid">Done</button>
+</form>
+
+</div>

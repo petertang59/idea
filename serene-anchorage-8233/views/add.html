@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="add.css"/>
+
+<div class="container">
+<form name="frm" ng-submit="addIdea()">
+	<div class="title">
+		<input type="text" placeholder="Title" name="newIdea" ng-model="newIdea" required/>
+	</div>
+	
+	<textarea type="text" placeholder="Write here" name="newDetail" ng-model="newDetail"></textarea>
+	
+	<!-- <label id="label" for="pic"></label> -->
+	<input id="pic" type="file" onchange="previewFile()">
+	<button class="top-button" ng-disabled="frm.$invalid">Done</button>
+
+  <a href="#/main"><button>Go Back</button</a>
+</form>
+</div>
