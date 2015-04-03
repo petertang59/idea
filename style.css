@@ -198,6 +198,7 @@ input, textarea {
   	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
   	margin-bottom:1em;
   	transition: 0.5s;
+  	overflow:hidden;
 }
 
 .idea-full {
@@ -237,14 +238,14 @@ max-height: 1.5em;
   background: white;
   margin: -21px -1%;
   text-align:center;
-  transition: 1.3s;
+  transition: 0.5s;
   z-index:1;
   left: -440px;
 }
 
 .swiped-visible {
 	z-index:1;
-	transition: 1.3s;
+	transition: 0.5s;
 	left:6%;
 	height:100px;
 	-webkit-box-sizing: border-box;

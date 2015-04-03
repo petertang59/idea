@@ -41,6 +41,7 @@ min-height: 150px;
 .pin-box {
 	width:100%;
 	margin-bottom:2em;
+	float:left;
 }
 
 .container-wide .pin-box {

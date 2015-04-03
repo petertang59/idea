@@ -1,6 +1,6 @@
 <?php
 $rss4 = new DOMDocument();
-$rss4->load('https://www.pinterest.com/annakaa/designspiration/rss');  //Enter your pinterest username
+$rss4->load('https://www.pinterest.com/sharp/design-inspiration.rss');  //Enter your pinterest username
  
 $feed4 = array();
 $pins = $rss4->getElementsByTagName('item');
