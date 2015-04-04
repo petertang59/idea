@@ -43,7 +43,4 @@ var IdeaApp = angular.module('IdeaApp', ['ngAnimate','ngTouch','ngRoute'])
  //        objStore.createIndex('detail_idx', 'detail', {unique: false});
  //      });
 
-IdeaApp.Ideas = [
-  {'title':'This is a pretty cool idea!', 'detail':'Extremely awesome!', 'image':'img/typography.png'},
-  {'title':'This is another really cool Idea!', 'detail':'But it involves beer','image':'img/webdesign.png'}
-];
+// IdeaApp.Ideas = (localStorage.getItem('ideas')!==null) ? JSON.parse($scope.saved) [

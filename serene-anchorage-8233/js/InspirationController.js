@@ -28,7 +28,7 @@ function clearImages() {
 angular.module('IdeaApp').controller('InspirationController',['$scope',function($scope){
  $scope.Ideas = IdeaApp.Ideas;
 
-  var result = fetch('/views/pinterest-rest.php');
+  var result = fetch('http://localhost:8888/381-final/381-app/views/pinterest-rest.php');
   result.then(function (response) {
     return response.json()
   }).then(function (data) {
