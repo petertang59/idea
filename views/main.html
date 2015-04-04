@@ -3,19 +3,23 @@
       <!-- <p ng-click="toggle.state = !toggle.state">Change view</p> -->
       </div>
 <ul ng-repeat="(i, Idea) in Ideas">
-		<li class="Idea"  ng-swipe-right="Idea.state3 = !Idea.state3" ng-class="{'idea-swipe' : Idea.state3, 'idea-full':Idea.state4}">
+		<li class="Idea"  ng-swipe-right="Idea.state3 = !Idea.state3" ng-swipe-left="Idea.state3 = !Idea.state3" ng-class="{'idea-swipe' : Idea.state3, 'idea-full':Idea.state4}" >
       
       <div class="swiped" ng-class="{'swiped-visible':Idea.state3, 'swiped-hidden':Idea.state4}">
-        <button ng-click="delete($index)">Delete</button>
-        <button ng-click="Idea.state4 = !Idea.state4">Edit</button>
+        <img ng-click="delete($index)" src="img/trash.png">
+        <img ng-click="Idea.state4 = !Idea.state4" src="img/edit.png">
       </div>
-			
+			<!-- <div ng-click='Idea.state4=!Idea.state4'> -->
+      <div class="icon">
+      <img src="{{Idea.image}}">
+    </div>
       <h2>{{Idea.title}}</h2>
-			<p class="detail">{{Idea.detail}}</p>
       
+			<!-- <p class="detail">{{Idea.detail}}</p> -->
+      <!-- </div> -->
       <div class="edit" ng-class="{'edit-visible': Idea.state4}">
-        <textarea ng-model="Idea.title"></textarea>
-        <textarea ng-model="Idea.detail"></textarea>
+        <textarea class="title-edit" ng-model="Idea.title"></textarea>
+        <textarea class="detail-edit" ng-model="Idea.detail"></textarea>
         <button ng-click="Idea.state4 = !Idea.state4">Done</button>
       </div>
 		</li>

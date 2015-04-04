@@ -154,8 +154,12 @@ h1 {
 }
 
 h2 {
-	margin:0em;
-	color: #454545;
+	margin: 0em;
+  color: #454545;
+  max-height: 35px;
+  /*overflow: hidden;*/
+  text-align: left;
+  font-size:15pt;
 }
 
 p {
@@ -179,16 +183,37 @@ li {
 	text-align: center;
 }
 
+.icon {
+height: 50px;
+  width: 40px;
+  float: left;
+  /* background: black; */
+  margin: 0 10px;
+  margin-right: 15px;
+  /* padding-right: 15px; */
+  border-right: 1px solid #dedede;
+  vertical-align: middle;
+  padding: 10px 0;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+.icon img {
+	width:100%;
+}
+
 input, textarea {
 	font-family: Roboto slab;
 	color: #454545;
 }
 
 .idea {
-	height:100px;
+	height:101px;
 	width:100%;
 	background:white;
 	padding:20px 5px;
+	  padding-right: 10px;
 	float:left;
 	/*border: 1px solid #DEDEDE;*/
 	-webkit-box-sizing: border-box;
@@ -231,11 +256,15 @@ max-height: 1.5em;
 	display:block;
 }
 
+.idea-swipe .icon {
+	border: none;
+}
+
 .swiped {
 	position: absolute;
   width: 0;
-  /*height: 100px;*/
-  background: white;
+  height: 101px;
+  background: #00b7ff;
   margin: -21px -1%;
   text-align:center;
   transition: 0.5s;
@@ -246,15 +275,26 @@ max-height: 1.5em;
 .swiped-visible {
 	z-index:1;
 	transition: 0.5s;
-	left:6%;
-	height:100px;
+	left:1%;
+	height:102px;
 	-webkit-box-sizing: border-box;
   	-moz-box-sizing: border-box;
   	box-sizing: border-box;
-  	width: 90%;
+  	width: 100%;
+  	padding-top: 35px;
+}
+
+.swiped img {
+height: 30px;
+  width: 30px;
+  margin: 0 10px;
 }
 
 .swiped-hidden {
+	display:none;
+}
+
+.idea-swipe p, .idea-swipe h2{
 	display:none;
 }
 
@@ -270,6 +310,7 @@ max-height: 1.5em;
 
 .edit-visible {
 	display:block;
+
 }
 
 .edit-visible textarea{
@@ -277,12 +318,17 @@ max-height: 1.5em;
 	resize:none;
 }
 
-.edit-visible title{
-	font-size:20pt;
+.title-edit{
+	font-size: 18pt;
+  font-weight: bold;
+  width:90%;
+    height: 40px;
 }
 
-.edit-visible detail{
-	font-size:12pt;
+.detail-edit{
+	  font-size: 12pt;
+  width: 90%;
+  height: 70%;
 }
 
 .grid {

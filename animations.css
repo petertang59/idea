@@ -95,7 +95,7 @@
 
 //idea//
 
-.idea.ng-enter {	
+.ng-enter {	
 	transition: 0.3s;
 	opacity:1;
 	transform: scale(0);
@@ -104,7 +104,7 @@
 	/*transition-timing-function: ease-in;*/
 }
 
-.idea.ng-enter-active {
+.ng-enter-active {
 	opacity:1;
 	/*width: 30%;*/
 	transform: scale(1);
@@ -112,13 +112,14 @@
 
 }
 	
-.idea.ng-leave {
+.ng-leave {
 	transition: 0.3s;
 	opacity:1;
 }
 
-.idea.ng-leave-active {
+.ng-leave-active {
 	opacity: 0;
+  transition: 0.3s;
 }
 
 //pins//

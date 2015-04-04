@@ -30,19 +30,10 @@ IdeaApp.controller('IdeaController',['$scope',function($scope, $indexedDB){
 
 
   $scope.addIdea = function (){
-   $scope.Ideas.push({'title':$scope.newIdea,'detail':$scope.newDetail, toggle3: false})
+   $scope.Ideas.push({'title':$scope.newIdea,'detail':$scope.newDetail, 'image':$scope.newImage, toggle3: false})
    $scope.newIdea = ""
    $scope.newDetail = ""
-    IdeaApp.Ideas = $scope.Ideas;
-    console.log($scope.Ideas);
-
-    // IdeaApp.push({'title':$scope.newIdea,'detail':$scope.newDetail});
-  }  
-
-    $scope.editIdea = function (){
-   $scope.Ideas.update({'title':$scope.newIdea,'detail':$scope.newDetail})
-   $scope.newIdea = ""
-   $scope.newDetail = ""
+   $scope.newImage = ""
     IdeaApp.Ideas = $scope.Ideas;
     console.log($scope.Ideas);
 
@@ -54,10 +45,6 @@ IdeaApp.controller('IdeaController',['$scope',function($scope, $indexedDB){
      return !item.done
    })
   }
-
-  $scope.go = function ( path ) {
-  $location.path( path );
-  };
 
   $scope.delete = function  (index) {
    $scope.Ideas.splice(index, 1);
