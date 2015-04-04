@@ -1,4 +1,9 @@
-var idea_KEY = 'idea';
+var idea_KEY = 'ideas';
+
+IdeaApp.Ideas = [
+  {'title':'This is a pretty cool idea!', 'detail':'Extremely awesome!', 'image':'img/typography.png'},
+  {'title':'This is another really cool Idea!', 'detail':'But it involves beer','image':'img/webdesign.png'}
+];
 
 function loadidea() {
   var idea = localStorage.getItem(idea_KEY);
@@ -17,7 +22,8 @@ function loadidea() {
 function pushPost(idea) {
   var idea = loadidea();
   idea.push(idea);
-  localStorage.setItem(idea_KEY, JSON.stringify(idea));
+  // localStorage.setItem(idea_KEY, JSON.stringify(idea));
+  localStorage.setItem('ideas', JSON.stringify($scope.ideas));
 }
 
 function clearidea() {
@@ -35,6 +41,7 @@ IdeaApp.controller('IdeaController',['$scope',function($scope, $indexedDB){
    $scope.newDetail = ""
    $scope.newImage = ""
     IdeaApp.Ideas = $scope.Ideas;
+    localStorage.setItem('ideas', JSON.stringify($scope.ideas));
     console.log($scope.Ideas);
 
     // IdeaApp.push({'title':$scope.newIdea,'detail':$scope.newDetail});
