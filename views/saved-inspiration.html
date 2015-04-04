@@ -1,7 +1,6 @@
 <div class="container">
 	<h2>Saved</h2>
-	<button ng-click="loadImages()">LOAD THIS SHIT</button>
+	<button ng-click="loadImage()">Load</button>
 		<!-- <ul ng-repeat="loadImages(image)"> -->
-		<li><img src="{{element.image}}"></li>
-</ul>
+		<img ng-model="element.image" src="{{element.image}}">
 </div>
