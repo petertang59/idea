@@ -44,6 +44,6 @@ var IdeaApp = angular.module('IdeaApp', ['ngAnimate','ngTouch','ngRoute'])
  //      });
 
 IdeaApp.Ideas = [
-  {'title':'This is a pretty cool idea!', 'detail':'Extremely awesome!'},
-  {'title':'This is another really cool Idea!', 'detail':'But it involves beer'}
+  {'title':'This is a pretty cool idea!', 'detail':'Extremely awesome!', 'image':'img/typography.png'},
+  {'title':'This is another really cool Idea!', 'detail':'But it involves beer','image':'img/webdesign.png'}
 ];

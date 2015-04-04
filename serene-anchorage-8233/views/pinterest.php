@@ -41,7 +41,7 @@ for($x=0;$x<20;$x++) {  //Displays first three pins (can be changed)
 ?>
 <ul ng-repeat="element in pinterestFeed">
   <li class="pin-box">
-    <a class="pin-name" href="{{element.link}}">{{element.title}}</a> 
+    <a class="pin-name" href="{{element.name}}">{{element.title}}</a> 
     <div class="pin">
     <img src="{{element.image}}">
 </div>
