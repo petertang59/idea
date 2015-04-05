@@ -28,7 +28,7 @@ input {
 
 textarea, .content input {
 	font-size:16px;
-	min-height:350px;
+	min-height:300px;
 	width:100%;
 	border:none;
 	resize:none;

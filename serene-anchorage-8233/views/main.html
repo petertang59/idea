@@ -7,7 +7,7 @@
       
       <div class="swiped" ng-class="{'swiped-visible':Idea.state3, 'swiped-hidden':Idea.state4}">
         <img ng-click="delete($index)" src="img/trash.png">
-        <img ng-click="Idea.state4 = !Idea.state4" src="img/edit.png">
+        <img ng-click="Idea.state4 = !Idea.state4; Idea.state3 = !Idea.state3;" src="img/edit.png">
       </div>
 			<!-- <div ng-click='Idea.state4=!Idea.state4'> -->
       <div class="icon">
@@ -20,7 +20,8 @@
       <div class="edit" ng-class="{'edit-visible': Idea.state4}">
         <textarea class="title-edit" ng-model="Idea.title"></textarea>
         <textarea class="detail-edit" ng-model="Idea.detail"></textarea>
-        <button ng-click="Idea.state4 = !Idea.state4">Done</button>
+        <button ng-click="Idea.state4 = !Idea.state4; save(); Idea.state3 = !Idea.state3;">Done</button>
+        <!-- <button ng-click="save()">Save</button> -->
       </div>
 		</li>
 	</ul>

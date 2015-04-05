@@ -25,10 +25,10 @@ function clearImages() {
 	localStorage.setItem(IMAGES_KEY, '[]');
 }
 
-angular.module('IdeaApp').controller('InspirationController',['$scope',function($scope){
+angular.module('IdeaApp').controller('InspirationTypeController',['$scope',function($scope){
  $scope.Ideas = IdeaApp.Ideas;
 
-  var result = fetch('http://localhost:8888/381-final/381-app/views/pinterest-rest.php');
+  var result = fetch('http://localhost:8888/381-final/381-app/views/pinterest-rest-type.php');
   result.then(function (response) {
     return response.json()
   }).then(function (data) {
@@ -39,26 +39,6 @@ angular.module('IdeaApp').controller('InspirationController',['$scope',function(
 
   $scope.storeImage = function (image) {
   	pushImage(image);
-  };
-
-  $scope.pinterestFeed = [];
-   
-  }]);
-
-angular.module('IdeaApp').controller('InspirationController-type',['$scope',function($scope){
- $scope.Ideas = IdeaApp.Ideas;
-
-  var result = fetch('http://localhost:8888/381-final/381-app/views/pinterest-rest-type.php');
-  result.then(function (response) {
-    return response.json()
-  }).then(function (data) {
-    console.log(data);
-    $scope.pinterestFeed = data;
-    $scope.$apply();
-  });
-
-  $scope.storeImage = function (image) {
-    pushImage(image);
   };
 
   $scope.pinterestFeed = [];

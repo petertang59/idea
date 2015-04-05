@@ -19,6 +19,11 @@ var IdeaApp = angular.module('IdeaApp', ['ngAnimate','ngTouch','ngRoute'])
       controller: 'InspirationController'
     })
 
+    .when('/inspiration-type', {
+      templateUrl: 'views/pinterest.php',
+      controller: 'InspirationController-type'
+    })
+
     .when('/saved-inspiration', {
       templateUrl: 'views/saved-inspiration.html',
       controller: 'InspirationController'
@@ -34,13 +39,3 @@ var IdeaApp = angular.module('IdeaApp', ['ngAnimate','ngTouch','ngRoute'])
     });
 }]);
 
- // angular.module('IdeaApp', ['xc.indexedDB'])
- //  .config(function ($indexedDBProvider) {
- //    $indexedDBProvider
- //      .connection('myIndexedDB')
- //      var objStore = db.createObjectStore('title', {keyPath: 'ssn'});
- //        objStore.createIndex('title_idx', 'title', {unique: false});
- //        objStore.createIndex('detail_idx', 'detail', {unique: false});
- //      });
-
-// IdeaApp.Ideas = (localStorage.getItem('ideas')!==null) ? JSON.parse($scope.saved) [
