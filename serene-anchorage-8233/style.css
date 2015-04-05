@@ -263,13 +263,15 @@ max-height: 1.5em;
 .swiped {
 	position: absolute;
   width: 0;
-  height: 101px;
+  height: 102px;
   background: #00b7ff;
   margin: -21px -1%;
   text-align:center;
   transition: 0.5s;
   z-index:1;
   left: -440px;
+    padding-top: 35px;
+    display:block;
 }
 
 .swiped-visible {
@@ -282,6 +284,7 @@ max-height: 1.5em;
   	box-sizing: border-box;
   	width: 100%;
   	padding-top: 35px;
+  	  margin: -21px -1%;
 }
 
 .swiped img {
@@ -292,9 +295,11 @@ height: 30px;
 
 .swiped-hidden {
 	display:none;
+
+
 }
 
-.idea-swipe p, .idea-swipe h2{
+.idea-full p, .idea-full h2{
 	display:none;
 }
 
@@ -322,13 +327,13 @@ height: 30px;
 	font-size: 18pt;
   font-weight: bold;
   width:90%;
-    height: 40px;
+    height: 80px;
 }
 
 .detail-edit{
 	  font-size: 12pt;
   width: 90%;
-  height: 70%;
+  height: 65%;
 }
 
 .grid {
@@ -347,5 +352,34 @@ li, ul, div {
 div:focus, textarea:focus, input:focus, select:focus, button:focus{
     outline: 0;
 }
+
+#back-top {
+  float: right;
+  width: 35px;
+  height: 35px;
+  z-index: 3333;
+  position: fixed;
+  right: 20px;
+  text-align: right;
+  margin-top: 3px;
+}
+
+#back-top-bg {
+width: 100%;
+height: 100%;
+background: black;
+margin-left: 6px;
+margin-top: 2px;
+opacity: 0.5;
+border: solid 1px black;
+transition: 0.6s;
+}
+/*
+#back-top a:hover > #back-top-bg {
+	opacity: 0.5;
+	background:none;
+	border: solid 1px black;
+	transition: 0.3s;
+}*/
 
 //Typography//
