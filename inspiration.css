@@ -45,7 +45,9 @@ min-height: 150px;
   float: left;  width: 100%;
   margin-bottom: 3em;
   padding-bottom: 1em;
+  padding-top: 1em;
   float: left;
+  background:white;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 

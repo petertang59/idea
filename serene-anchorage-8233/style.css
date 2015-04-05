@@ -1,5 +1,5 @@
 body {
-	background-color: #FAFAFA;
+	background-color: #e8e8e8;
 	/*background-color: #E3E3E3;*/
 }
 
@@ -15,6 +15,10 @@ height: 40px;
   /*border-bottom: 1px solid #DEDEDE;*/
   z-index: 5;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+	margin-top:2px;
 }
 
 .nav-button {
@@ -105,11 +109,17 @@ height: 40px;
 	float:right;
 	position:absolute;
 	right:5%;
-	top:18px;
+	top:15px;
+	/*border: 1px solid white;
+	padding:5px;*/
 }
 
 .add-button a {
 	color: white !important;
+}
+
+.add-button a img {
+	width:20px;
 }
 
 .container {
