@@ -2,5 +2,7 @@
 	<h2>Saved</h2>
 	<button ng-click="loadImage()">Load</button>
 		<!-- <ul ng-repeat="loadImages(image)"> -->
-		<img ng-model="element.image" src="{{element.image}}">
+		<div ng-repeat="element in pinterestFeed">
+			<img src="{{element.image}}">
+		</div>
 </div>

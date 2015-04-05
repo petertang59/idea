@@ -39,13 +39,3 @@ var IdeaApp = angular.module('IdeaApp', ['ngAnimate','ngTouch','ngRoute'])
     });
 }]);
 
- // angular.module('IdeaApp', ['xc.indexedDB'])
- //  .config(function ($indexedDBProvider) {
- //    $indexedDBProvider
- //      .connection('myIndexedDB')
- //      var objStore = db.createObjectStore('title', {keyPath: 'ssn'});
- //        objStore.createIndex('title_idx', 'title', {unique: false});
- //        objStore.createIndex('detail_idx', 'detail', {unique: false});
- //      });
-
-// IdeaApp.Ideas = (localStorage.getItem('ideas')!==null) ? JSON.parse($scope.saved) [

@@ -45,7 +45,7 @@ $scope.Ideas = (localStorage.getItem('Ideas')!==null) ? JSON.parse($scope.saved)
 
 
   $scope.addIdea = function (){
-   $scope.Ideas.push({'title':$scope.newIdea,'detail':$scope.newDetail, 'image':$scope.newImage, toggle3: false})
+   $scope.Ideas.push({'title':$scope.newIdea,'detail':$scope.newDetail, 'image':$scope.newImage, state3: false, state4: false})
    // IdeaApp.push({'title':$scope.newIdea,'detail':$scope.newDetail, 'image':$scope.newImage, toggle3: false});
    $scope.newIdea = ""
    $scope.newDetail = ""
@@ -59,6 +59,12 @@ $scope.Ideas = (localStorage.getItem('Ideas')!==null) ? JSON.parse($scope.saved)
    $scope.Ideas = $scope.Ideas.filter(function(item) {
      return !item.done
    })
+  }
+
+  $scope.save = function () {	
+  	localStorage.setItem('Ideas', JSON.stringify($scope.Ideas));
+  	$scope.Ideas.state4 = false;
+  	console.log($scope.Ideas);
   }
 
   $scope.delete = function  (index) {
