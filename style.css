@@ -394,3 +394,18 @@ transition: 0.6s;
 }*/
 
 //Typography//
+
+@font-face {
+    font-family: Roboto Slab Bold;
+    src: url(fonts/RobotoSlab-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto Slab Light;
+    src: url(fonts/RobotoSlab-Light.ttf);
+}
+
+@font-face {
+    font-family: Roboto Slab;
+    src: url(fonts/RobotoSlab-Regular.ttf);
+}
