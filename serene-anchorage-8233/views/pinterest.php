@@ -12,10 +12,12 @@
     <div class="button" ng-click="toggle.state2 = !toggle.state2">Change View</div>
 <ul ng-repeat="element in pinterestFeed">
   <li class="pin-box">
-    <a class="pin-name" href="{{element.name}}">{{element.title}}</a> 
+    <a class="pin-name" href="{{element.name}}"><p>{{element.title}}</p>
     <div class="pin">
-    <img src="{{element.image}}">
-</div>
+    	<img src="{{element.image}}">
+    	</a>
+      <!-- <p>{{element.description}}</p> -->
+	</div>
     <button ng-click="storeImage(element)">Save</button></li>
 </ul>
 </div>

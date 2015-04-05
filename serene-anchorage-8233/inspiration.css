@@ -7,8 +7,8 @@
 }
 
 .pin {
-		width:80%;
-		margin:1em 10%;
+		width:90%;
+		margin:1em 5%;
 		transition: 0.3s;	
 	}
 .pin img {
@@ -39,14 +39,19 @@ min-height: 150px;
 	}
 
 .pin-box {
-	width:100%;
-	margin-bottom:2em;
-	float:left;
+	  width: 100%;
+  margin-bottom: 3em;
+  padding-bottom: 1em;
+  float: left;  width: 100%;
+  margin-bottom: 3em;
+  padding-bottom: 1em;
+  float: left;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .container-wide .pin-box {
-		width: 50%;
-  margin: 0;
+  width: 45%;
+  margin: auto 2.5%;
   margin-top: 1em;
   margin-bottom: 2em;
   float: left;

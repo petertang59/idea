@@ -28,7 +28,7 @@ function clearImages() {
 angular.module('IdeaApp').controller('InspirationController',['$scope',function($scope){
  $scope.Ideas = IdeaApp.Ideas;
 
-  var result = fetch('views/pinterest-rest.php');
+  var result = fetch('views/pinterest/pinterest-rest.php');
   result.then(function (response) {
     return response.json()
   }).then(function (data) {
@@ -48,7 +48,7 @@ angular.module('IdeaApp').controller('InspirationController',['$scope',function(
 angular.module('IdeaApp').controller('InspirationController-type',['$scope',function($scope){
  $scope.Ideas = IdeaApp.Ideas;
 
-  var result = fetch('views/pinterest-rest-type.php');
+  var result = fetch('views/pinterest/pinterest-rest-type.php');
   result.then(function (response) {
     return response.json()
   }).then(function (data) {
@@ -65,3 +65,82 @@ angular.module('IdeaApp').controller('InspirationController-type',['$scope',func
    
   }]);
 
+angular.module('IdeaApp').controller('InspirationController-graphic',['$scope',function($scope){
+ $scope.Ideas = IdeaApp.Ideas;
+
+  var result = fetch('views/pinterest/pinterest-rest-graphic.php');
+  result.then(function (response) {
+    return response.json()
+  }).then(function (data) {
+    console.log(data);
+    $scope.pinterestFeed = data;
+    $scope.$apply();
+  });
+
+  $scope.storeImage = function (image) {
+    pushImage(image);
+  };
+
+  $scope.pinterestFeed = [];
+   
+  }]);
+
+angular.module('IdeaApp').controller('InspirationController-web',['$scope',function($scope){
+ $scope.Ideas = IdeaApp.Ideas;
+
+  var result = fetch('views/pinterest/pinterest-rest-web.php');
+  result.then(function (response) {
+    return response.json()
+  }).then(function (data) {
+    console.log(data);
+    $scope.pinterestFeed = data;
+    $scope.$apply();
+  });
+
+  $scope.storeImage = function (image) {
+    pushImage(image);
+  };
+
+  $scope.pinterestFeed = [];
+   
+  }]);
+
+angular.module('IdeaApp').controller('InspirationController-illustration',['$scope',function($scope){
+ $scope.Ideas = IdeaApp.Ideas;
+
+  var result = fetch('views/pinterest/pinterest-rest-illustration.php');
+  result.then(function (response) {
+    return response.json()
+  }).then(function (data) {
+    console.log(data);
+    $scope.pinterestFeed = data;
+    $scope.$apply();
+  });
+
+  $scope.storeImage = function (image) {
+    pushImage(image);
+  };
+
+  $scope.pinterestFeed = [];
+   
+  }]);
+
+angular.module('IdeaApp').controller('InspirationController-film',['$scope',function($scope){
+ $scope.Ideas = IdeaApp.Ideas;
+
+  var result = fetch('views/pinterest/pinterest-rest-film.php');
+  result.then(function (response) {
+    return response.json()
+  }).then(function (data) {
+    console.log(data);
+    $scope.pinterestFeed = data;
+    $scope.$apply();
+  });
+
+  $scope.storeImage = function (image) {
+    pushImage(image);
+  };
+
+  $scope.pinterestFeed = [];
+   
+  }]);
