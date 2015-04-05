@@ -44,6 +44,11 @@ var IdeaApp = angular.module('IdeaApp', ['ngAnimate','ngTouch','ngRoute'])
       controller: 'InspirationController-film'
     })
 
+         .when('/inspiration-photography', {
+      templateUrl: 'views/pinterest.php',
+      controller: 'InspirationController-photography'
+    })
+
     .when('/saved-inspiration', {
       templateUrl: 'views/saved-inspiration.html',
       controller: 'InspirationController'

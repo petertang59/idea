@@ -144,3 +144,23 @@ angular.module('IdeaApp').controller('InspirationController-film',['$scope',func
   $scope.pinterestFeed = [];
    
   }]);
+
+angular.module('IdeaApp').controller('InspirationController-photography',['$scope',function($scope){
+ $scope.Ideas = IdeaApp.Ideas;
+
+  var result = fetch('views/pinterest/pinterest-rest-photography.php');
+  result.then(function (response) {
+    return response.json()
+  }).then(function (data) {
+    console.log(data);
+    $scope.pinterestFeed = data;
+    $scope.$apply();
+  });
+
+  $scope.storeImage = function (image) {
+    pushImage(image);
+  };
+
+  $scope.pinterestFeed = [];
+   
+  }]);
