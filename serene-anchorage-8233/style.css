@@ -131,6 +131,15 @@ button {
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
+button:disabled {
+  opacity: 0.4;
+  transition:0.3s;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
 .button:active, button:active {
   background:#009AD6;
 }
