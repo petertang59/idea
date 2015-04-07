@@ -1,10 +1,10 @@
 <?php
 $rss4 = new DOMDocument();
 $rss4->load('https://www.pinterest.com/sharp/design-inspiration.rss');  //Enter your pinterest username
-// $rss4->load('https://www.pinterest.com/shotofideas/typography.rss');  //Enter your pinterest username
  
 $feed4 = array();
 $pins = $rss4->getElementsByTagName('item');
+$limit = 5;
 foreach ($pins as $pin) {
 	$description = $pin->getElementsByTagName('description')->item(0)->nodeValue;
 	$start = strpos($description,"<img src") + 10;

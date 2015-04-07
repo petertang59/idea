@@ -49,11 +49,10 @@ min-height: 50px;
   float: left;
   background:white;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
-   -webkit-animation: enter 0.5s; /* Safari 4+ */
-  -moz-animation:    enter 0.5s; /* Fx 5+ */
-  -o-animation:      enter 0.5s; /* Opera 12+ */
-  animation:         enter 0.5s; 
-   animation-delay: 1s;
+  -webkit-animation: enter 1.5s; /* Safari 4+ */
+  -moz-animation:    enter 1.5s; /* Fx 5+ */
+  -o-animation:      enter 1.5s; /* Opera 12+ */
+  animation:         enter 1.5s; 
 }
 
 .container-wide .pin-box {
@@ -85,6 +84,14 @@ p {
   margin-bottom: 0;
   width:50%;
   height:40px;
+}
+
+ul {
+  margin:0;
+}
+
+.button {
+  margin-top: 1em;
 }
 
 @-webkit-keyframes enter {

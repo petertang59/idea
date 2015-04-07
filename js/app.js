@@ -51,7 +51,7 @@ var IdeaApp = angular.module('IdeaApp', ['ngAnimate','ngTouch','ngRoute','masonr
 
     .when('/inspiration-all', {
       templateUrl: 'views/pinterest.php',
-      controller: 'InspirationController-photography',
+      controller: 'InspirationController-all',
     })
 
     .when('/saved-inspiration', {

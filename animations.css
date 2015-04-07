@@ -66,6 +66,10 @@
   transition: 0.3s;
 }
 
+.idea.ng-enter {  
+  height:0px;
+}
+
 //pin-boxs//
 
 .pin-box.ng-enter {  

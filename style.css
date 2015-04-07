@@ -131,15 +131,22 @@ button {
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
-button:active {
+.button:active, button:active {
   background:#009AD6;
 }
 
 .button {
-	font-size:14px;
-	padding:0.5em;
-	margin: 1em;
-	border: 1px solid #dedede;
+  background: #00b7ff;
+  border-radius: 0px;
+  width: 100px;
+  padding: 0.5em;
+  font-size: 12px;
+  font-family: roboto slab;
+  color: white;
+  border: 0px solid #dedede;
+  margin: auto;
+  margin-bottom:1em;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .add-button {
@@ -276,6 +283,10 @@ input, textarea {
   	margin-bottom:1em;
   	transition: 0.5s;
   	overflow:hidden;
+      -webkit-animation: enter 1.5s; /* Safari 4+ */
+  -moz-animation:    enter 1.5s; /* Fx 5+ */
+  -o-animation:      enter 1.5s; /* Opera 12+ */
+  animation:         enter 1.5s; 
 }
 
 .idea-full {
@@ -334,6 +345,10 @@ max-height: 1.5em;
   display: none;
 }
 
+.flagShow {
+  display:none;
+}
+
 .swiped-visible {
 	z-index:1;
 	transition: 0.5s;
@@ -387,13 +402,13 @@ height: 30px;
 	font-size: 18pt;
   font-weight: bold;
   width:90%;
-    height: 80px;
+    height: 70px;
 }
 
 .detail-edit{
 	  font-size: 12pt;
   width: 90%;
-  height: 63%;
+  height: 60%;
 }
 
 .grid {
@@ -436,6 +451,7 @@ div:focus, textarea:focus, input:focus, select:focus, button:focus{
   vertical-align: middle;
   background: white;
   padding: 10px;
+  overflow:hidden;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -444,7 +460,7 @@ div:focus, textarea:focus, input:focus, select:focus, button:focus{
   -moz-animation:    enter 1.5s; /* Fx 5+ */
   -o-animation:      enter 1.5s; /* Opera 12+ */
   animation:         enter 1.5s; 
-   animation-delay: 5s;
+   /*animation-delay: 5s;*/
 }
 
 .inspiration-box img {
@@ -453,9 +469,15 @@ div:focus, textarea:focus, input:focus, select:focus, button:focus{
 }
 
 @-webkit-keyframes enter {
-  0%   { /*margin-left: -100px;*/ 
-      opacity: 0;}
-  100% { /*margin-left: 0; */
+  0%   { 
+    /*height:0px;*/
+    /*padding:0px;*/
+    /*margin-left: -100px;*/ 
+      opacity: 0}
+  100% { 
+    /*height:100px;*/
+    /*padding:10px;*/
+    /*margin-left: 0; */
     opacity: 1.0; }
 }
 

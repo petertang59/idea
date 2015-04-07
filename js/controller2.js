@@ -2,8 +2,8 @@
 
 // IdeaApp.Ideas = (localStorage.getItem('Ideas')!==null) ? JSON.parse($scope.saved) :[
 IdeaApp.Ideas = [ 
-  {'title':'This is a pretty cool idea!', 'detail':'Extremely awesome!', 'image':'img/typography.png','flag':false},
-  {'title':'This is another really cool Idea!', 'detail':'But it involves beer','image':'img/webdesign.png', 'flag':false}
+  {'title':'This is a pretty cool idea!', 'detail':'Make a typographic representation of the universe!', 'image':'img/typography.png','flag':false},
+  {'title':'This is another really cool Idea!', 'detail':'Make a website about cats','image':'img/webdesign.png', 'flag':false}
 ];
 
 // function loadidea() {
@@ -59,11 +59,12 @@ $scope.Ideas = (localStorage.getItem('Ideas')!==null) ? JSON.parse($scope.saved)
    $scope.Ideas = $scope.Ideas.filter(function(item) {
      return !item.done
    })
+   return false;
   }
 
   $scope.showFlagged = function (){
     $scope.Ideas = $scope.Ideas.filter(function(item) {
-      return !item.flag
+      return item.flag
     })
   }
 
