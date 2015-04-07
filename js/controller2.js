@@ -2,8 +2,8 @@
 
 // IdeaApp.Ideas = (localStorage.getItem('Ideas')!==null) ? JSON.parse($scope.saved) :[
 IdeaApp.Ideas = [ 
-  {'title':'This is a pretty cool idea!', 'detail':'Extremely awesome!', 'image':'img/typography.png'},
-  {'title':'This is another really cool Idea!', 'detail':'But it involves beer','image':'img/webdesign.png'}
+  {'title':'This is a pretty cool idea!', 'detail':'Extremely awesome!', 'image':'img/typography.png','flag':false},
+  {'title':'This is another really cool Idea!', 'detail':'But it involves beer','image':'img/webdesign.png', 'flag':false}
 ];
 
 // function loadidea() {
@@ -45,11 +45,11 @@ $scope.Ideas = (localStorage.getItem('Ideas')!==null) ? JSON.parse($scope.saved)
 
 
   $scope.addIdea = function (){
-   $scope.Ideas.push({'title':$scope.newIdea,'detail':$scope.newDetail, 'image':$scope.newImage, state3: false, state4: false})
-   // IdeaApp.push({'title':$scope.newIdea,'detail':$scope.newDetail, 'image':$scope.newImage, toggle3: false});
+   $scope.Ideas.push({'title':$scope.newIdea,'detail':$scope.newDetail, 'image':$scope.newImage, state3: false, state4: false, 'flag':false})
    $scope.newIdea = ""
    $scope.newDetail = ""
    $scope.newImage = ""
+
    // IdeaApp.Ideas = $scope.Ideas;
    localStorage.setItem('Ideas', JSON.stringify($scope.Ideas));
     console.log($scope.Ideas);
@@ -61,9 +61,14 @@ $scope.Ideas = (localStorage.getItem('Ideas')!==null) ? JSON.parse($scope.saved)
    })
   }
 
+  $scope.showFlagged = function (){
+    $scope.Ideas = $scope.Ideas.filter(function(item) {
+      return !item.flag
+    })
+  }
+
   $scope.save = function () {	
   	localStorage.setItem('Ideas', JSON.stringify($scope.Ideas));
-  	$scope.Ideas.state4 = false;
   	console.log($scope.Ideas);
   }
 

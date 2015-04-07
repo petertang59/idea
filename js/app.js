@@ -1,4 +1,4 @@
-var IdeaApp = angular.module('IdeaApp', ['ngAnimate','ngTouch','ngRoute'])
+var IdeaApp = angular.module('IdeaApp', ['ngAnimate','ngTouch','ngRoute','masonry'])
 
 .config(['$routeProvider',
   function($routeProvider) {
@@ -15,8 +15,8 @@ var IdeaApp = angular.module('IdeaApp', ['ngAnimate','ngTouch','ngRoute'])
     })
 
     .when('/inspiration', {
-      templateUrl: 'views/pinterest.php',
-      controller: 'InspirationController'
+      templateUrl: 'views/inspiration.html',
+      controller: 'IdeaController'
     })
 
     .when('/inspiration-type', {
@@ -49,9 +49,14 @@ var IdeaApp = angular.module('IdeaApp', ['ngAnimate','ngTouch','ngRoute'])
       controller: 'InspirationController-photography'
     })
 
+    .when('/inspiration-all', {
+      templateUrl: 'views/pinterest.php',
+      controller: 'InspirationController-photography',
+    })
+
     .when('/saved-inspiration', {
       templateUrl: 'views/saved-inspiration.html',
-      controller: 'InspirationController'
+      controller: 'InspirationController', 
     })
 
     .when('/archived', {

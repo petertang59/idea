@@ -13,7 +13,7 @@
 	}
 .pin img {
 	width: 100%;
-	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+	/*box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);*/
 }
 
 .container-wide .pin img {
@@ -29,7 +29,7 @@ width: 90%;
 	}
 
 	.container-wide .pin {
-min-height: 150px;
+min-height: 50px;
   width: 100%;
   float: left;
   overflow: hidden;
@@ -43,24 +43,53 @@ min-height: 150px;
   margin-bottom: 3em;
   padding-bottom: 1em;
   float: left;  width: 100%;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   padding-bottom: 1em;
   padding-top: 1em;
   float: left;
   background:white;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+   -webkit-animation: enter 0.5s; /* Safari 4+ */
+  -moz-animation:    enter 0.5s; /* Fx 5+ */
+  -o-animation:      enter 0.5s; /* Opera 12+ */
+  animation:         enter 0.5s; 
+   animation-delay: 1s;
 }
 
 .container-wide .pin-box {
   width: 45%;
   margin: auto 2.5%;
   margin-top: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 0em;
   float: left;
-	}
+}
 
 .pin-name {
 	color: #454545;
 	font-size: 14px;
 	width: 50%;
 	}
+
+p {
+	margin-bottom:1em;
+}
+
+.container-wide .pin-box button {
+	margin-bottom:0em;
+  margin-top:1em;
+
+}
+
+.top-button {
+    margin-top: 1em;
+  margin-bottom: 0;
+  width:50%;
+  height:40px;
+}
+
+@-webkit-keyframes enter {
+  0%   { /*margin-left: -100px;*/ 
+  		opacity: 0;}
+  100% { /*margin-left: 0; */
+  	opacity: 1.0; }
+}

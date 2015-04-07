@@ -147,8 +147,8 @@ angular.module('IdeaApp').controller('InspirationController-film',['$scope',func
 
 angular.module('IdeaApp').controller('InspirationController-photography',['$scope',function($scope){
  $scope.Ideas = IdeaApp.Ideas;
-
-  var result = fetch('views/pinterest/pinterest-rest-photography.php');
+ 
+var result = fetch('views/pinterest/pinterest-rest-photography.php');
   result.then(function (response) {
     return response.json()
   }).then(function (data) {
