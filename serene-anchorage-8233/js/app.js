@@ -1,4 +1,4 @@
-var IdeaApp = angular.module('IdeaApp', ['ngAnimate','ngTouch','ngRoute','masonry'])
+var IdeaApp = angular.module('IdeaApp', ['ngAnimate','ngTouch','ngRoute'])
 
 .config(['$routeProvider',
   function($routeProvider) {

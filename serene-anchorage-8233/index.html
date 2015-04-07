@@ -24,9 +24,6 @@
   <body>
         <div class="pullout" ng-class="{'pullout-active' : pullout.state1}">
         <div class="pullout-head"></div>
-          <!-- <a href="#/main" ng-click="pullout.state1 = !pullout.state1">All Notes</a>
-          <a href="#/saved-inspiration" ng-click="pullout.state1 = !pullout.state1">Archived</a>
-          <a href="#/inspiration" ng-click="pullout.state1 = !pullout.state1">Inspiration</a> -->
           <a ng-click="pullout.state1 = !pullout.state1" href="#/main" >Notes</a>
           <a ng-click="pullout.state1 = !pullout.state1" href="#/saved-inspiration">Archived</a>
           <a ng-click="pullout.state1 = !pullout.state1" href="#/inspiration">Inspiration Board</a>
@@ -48,9 +45,5 @@
             <div ng-view class="view-animate">
           </div>
         </div>
-
-
-
-
       </body>
 </html>

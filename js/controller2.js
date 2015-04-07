@@ -35,12 +35,7 @@ IdeaApp.controller('IdeaController',[
 '$scope',function($scope){
  $scope.saved = localStorage.getItem('Ideas');
 $scope.Ideas = (localStorage.getItem('Ideas')!==null) ? JSON.parse($scope.saved) : IdeaApp.Ideas;
- // $scope.Ideas = [
- // {'title':'This is a pretty cool idea!', 'detail':'Extremely awesome!', 'image':'img/typography.png'},
- //  {'title':'This is another really cool Idea!', 'detail':'But it involves beer','image':'img/webdesign.png'} ];
 	console.log($scope.Ideas);
-  // $scope.Ideas = (localStorage.getItem('Ideas')!==null) ? JSON.parse($scope.saved) : [{'title':'This is a pretty cool idea!', 'detail':'Extremely awesome!', 'image':'img/typography.png'},
-  // {'title':'This is another really cool Idea!', 'detail':'But it involves beer','image':'img/webdesign.png'} ];
   localStorage.setItem('Ideas', JSON.stringify($scope.Ideas));
 
 
@@ -50,10 +45,20 @@ $scope.Ideas = (localStorage.getItem('Ideas')!==null) ? JSON.parse($scope.saved)
    $scope.newDetail = ""
    $scope.newImage = ""
 
-   // IdeaApp.Ideas = $scope.Ideas;
    localStorage.setItem('Ideas', JSON.stringify($scope.Ideas));
     console.log($scope.Ideas);
   }  
+
+  $scope.delete = function  (index) {
+   $scope.Ideas.splice(index, 1);
+   console.log($scope.Ideas);
+   localStorage.setItem('Ideas', JSON.stringify($scope.Ideas));
+  };
+
+   $scope.save = function () {  
+    localStorage.setItem('Ideas', JSON.stringify($scope.Ideas));
+    console.log($scope.Ideas);
+  }
 
   $scope.clearCompleted = function (){
    $scope.Ideas = $scope.Ideas.filter(function(item) {
@@ -67,17 +72,6 @@ $scope.Ideas = (localStorage.getItem('Ideas')!==null) ? JSON.parse($scope.saved)
       return item.flag
     })
   }
-
-  $scope.save = function () {	
-  	localStorage.setItem('Ideas', JSON.stringify($scope.Ideas));
-  	console.log($scope.Ideas);
-  }
-
-  $scope.delete = function  (index) {
-   $scope.Ideas.splice(index, 1);
-   console.log($scope.Ideas);
-   localStorage.setItem('Ideas', JSON.stringify($scope.Ideas));
-  };
 
   $scope.archive = function() {
 		var oldIdeas = $scope.Ideas;

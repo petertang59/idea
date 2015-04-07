@@ -4,9 +4,6 @@
   data-masonry-options='{ 'columnWidth': 40%, 'itemSelector': '.pin-box' }'>
 		    <div id="back-top">
 		        <a>
-		          <!-- <div id="top-arrow1"></div>
-		          <div id="top-arrow2"></div>
-		        <div id="back-top-bg"></div> -->
             <img src="img/arrow.png">
 		        </a>
       		</div>
